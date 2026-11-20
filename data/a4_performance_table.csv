@@ -1,0 +1,8 @@
+Metric,Planned,Actual (Webots)
+Path Length (m),2.567,2.444
+Time to Goal (s),-,32.3
+Mean Tracking Error (cm),-,0.79
+Max Tracking Error (cm),-,4.16
+RMS Tracking Error (cm),-,1.11
+Final Goal Distance (cm),-,2.92
+Goal Reached Successfully,-,True

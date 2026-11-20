@@ -1,0 +1,135 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+  basicTimeStep 32
+}
+Viewpoint {
+  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
+  position 3.9187403322316073e-16 0 3.2
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+}
+E-puck {
+  translation -0.8 -0.8 0
+  name "epuck_A"
+  controller "navigator"
+  supervisor TRUE
+  camera_width 160
+  camera_height 120
+  turretSlot [
+    Lidar {
+      name "lidar"
+      horizontalResolution 360
+      fieldOfView 6.2832
+      verticalFieldOfView 0.1
+      numberOfLayers 1
+      minRange 0.05
+      maxRange 2.5
+    }
+  ]
+}
+Solid {
+  translation 0.4 0.3 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "red_box"
+  boundingObject Box {
+    size 0.2 0.2 0.2
+  }
+}
+Solid {
+  translation -0.3 -0.2 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.25 0.15 0.2
+      }
+    }
+  ]
+  name "blue_box"
+  boundingObject Box {
+    size 0.25 0.15 0.2
+  }
+}
+Solid {
+  translation 0.5 -0.5 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0.8 0
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.2
+        radius 0.06
+      }
+    }
+  ]
+  name "green_landmark"
+  boundingObject Cylinder {
+    height 0.2
+    radius 0.06
+  }
+}
+Solid {
+  translation -0.4 0.5 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0.5 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.1 0.2
+      }
+    }
+  ]
+  name "orange_box"
+  boundingObject Box {
+    size 0.3 0.1 0.2
+  }
+}
+Solid {
+  translation 0.8 0.8 0.001
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.002
+        radius 0.08
+      }
+    }
+  ]
+  name "goal_marker"
+}

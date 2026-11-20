@@ -1,0 +1,6 @@
+Swarm Size (N),Centralised Latency (ms),Distributed Latency (ms),Centralised Bandwidth (KB/s),Distributed Bandwidth (KB/s)
+3,12.5,8.5,25.0,7.6
+5,17.5,8.5,35.0,10.0
+10,30.0,8.5,60.0,16.0
+20,55.0,8.5,110.0,28.0
+50,130.0,8.5,260.0,64.0
