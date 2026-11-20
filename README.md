@@ -20,14 +20,14 @@ A comprehensive robotics and multi-agent systems simulation suite built using **
 * **Libraries:** NumPy, OpenCV (`cv2`), PyTorch, Matplotlib, `python-control`
 
 ## Repository Structure
-* `webots_project/` – Webots world files (`.wbt`) and robot controllers
-* `scripts/` – Perception, planning, control, and ML Python scripts
-* `data/` – Captured sensor datasets and processed grids
-* `plots/` – Matplotlib trajectories, response curves, and metrics
-* `report/` – Technical documentation and evaluation
+* `webots_A/` – Component A Webots world (`component_a.wbt`) and controllers (`data_collector`, `navigator`)
+* `webots_B/` – Component B multi-agent Webots world (`component_b.wbt`) and `swarm_controller`
+* `notebooks/` – Perception, sensor fusion, Dijkstra/A* planning, PID kinematics, consensus/PSO, and PyTorch ML scripts
+* `data/` – Captured LiDAR scans, RGB camera frames, occupancy grids, model weights, and benchmark CSVs
+* `figures/` – Generated trajectories, PID step-response curves, swarm convergence plots, and confusion matrices
 
 ## Setup & Execution
 1. Install dependencies:
    `python -m pip install numpy matplotlib opencv-python torch torchvision control seaborn plotly`
-2. Run the environment verification script:
-   `python scripts/step1_verify_environment.py`
+2. Run any module script from the `notebooks/` directory (for example, the A* pathfinding benchmark):
+   `python notebooks/a2_compare.py`
